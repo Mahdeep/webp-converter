@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تبدیل تصاویر به WebP</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🖼️ تبدیل تصاویر به WebP</h1>
+    </header>
+    <main>
+      <section class="input-section">
+        <div class="file-selection">
+          <button id="selectFilesBtn" class="btn btn-primary">
+            📁 انتخاب فایل‌های تصویری
+          </button>
+          <div id="selectedFilesInfo" class="info-text">
+            هیچ فایلی انتخاب نشده
+          </div>
+        </div>
+
+        <div class="output-selection">
+          <button id="selectOutputBtn" class="btn btn-secondary">
+            📂 انتخاب پوشه خروجی
+          </button>
+          <div id="outputFolderInfo" class="info-text">
+            هیچ پوشه‌ای انتخاب نشده
+          </div>
+        </div>
+
+        <div class="quality-section">
+          <label for="qualitySlider">
+            کیفیت خروجی: <span id="qualityValue">80</span>%
+          </label>
+          <input 
+            type="range" 
+            id="qualitySlider" 
+            min="1" 
+            max="100" 
+            value="80"
+            class="quality-slider"
+          >
+          <div class="quality-hint">
+            <span>حجم کمتر ← کیفیت پایین‌تر</span>
+            <span>حجم بیشتر ← کیفیت بالاتر</span>
+          </div>
+        </div>
+
+        <button id="convertBtn" class="btn btn-convert" disabled>
+          🚀 شروع تبدیل
+        </button>
+      </section>
+
+      <section class="progress-section" id="progressSection" style="display: none;">
+        <div class="progress-info">
+          <p id="progressText">در حال پردازش...</p>
+          <div class="progress-bar">
+            <div id="progressFill" class="progress-fill"></div>
+          </div>
+          <p id="currentFile" class="current-file"></p>
+        </div>
+      </section>
+
+      <section class="results-section" id="resultsSection" style="display: none;">
+        <h2>نتایج تبدیل</h2>
+        <div id="resultsList" class="results-list"></div>
+        <div id="summaryStats" class="summary-stats"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>

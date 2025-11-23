@@ -1,0 +1,45 @@
+{
+  "name": "webp-converter",
+  "version": "1.0.0",
+  "description": "Image to WebP converter with batch processing",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-packager . WebPConverter --platform=win32 --arch=x64 --out=dist --overwrite",
+    "build-dir": "electron-builder --win --dir"
+  },
+  "keywords": [
+    "webp",
+    "image",
+    "converter"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1",
+    "electron-packager": "^17.1.2"
+  },
+  "dependencies": {
+    "sharp": "^0.33.0"
+  },
+  "build": {
+    "appId": "com.webpconverter.app",
+    "productName": "WebP Converter",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  }
+}
