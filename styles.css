@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'IRANSansX';
-  src: url('./fonts/IRANSansX-Regular.woff2') format('woff2');
+  font-family: 'Vazirmatn';
+  src: url('./fonts/Vazirmatn-Regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -13,7 +13,7 @@
 }
 
 body {
-  font-family: 'IRANSansX', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Vazirmatn', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   min-height: 100vh;
   padding: 20px;
